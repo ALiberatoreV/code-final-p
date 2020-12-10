@@ -28,7 +28,7 @@ completedbutton.classList.add("complete-button");
 tododiv.appendChild(completedbutton);
 
 const deletebutton = document.createElement("button");
-deletebutton.innerText = 'Delete'
+deletebutton.innerText = 'X'
 deletebutton.classList.add("delete-button");
 tododiv.appendChild(deletebutton);
 
@@ -49,4 +49,16 @@ function deletecheck(event) {
         const todo = item.parentElement;
         todo.remove();
     }
+
+
+    if(item.classList[0] === "complete-button"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed")
+    }
+    
+
+
+
+
 }
+
